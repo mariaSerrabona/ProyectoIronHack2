@@ -16,7 +16,7 @@ function CambiarModoOscuro(color_fondo, color_letras){
     }
 
     var encabezados_h2=document.getElementsByTagName("h2");
-    encabezados_h2.style.color="##E4E0E4";
+    encabezados_h2.style.color="#E4E0E4";
 }
 
 function CambiarModoClaro(color_fondo, color_letras){
@@ -31,9 +31,52 @@ function CambiarModoClaro(color_fondo, color_letras){
     }
 }
 
-boton_oscuro.addEventListener("click", function()  { CambiarModoOscuro("#353232", "#A6A6A6")});
+//boton_oscuro.addEventListener("click", function()  { CambiarModoOscuro("#353232", "#A6A6A6")});
 
-boton_claro.addEventListener("click", function()  { CambiarModoClaro("#E4E0E4", "black")});
+//boton_claro.addEventListener("click", function()  { CambiarModoClaro("#E4E0E4", "black")});
 
 
 
+
+setTimeout(function(){alert("Hey! Si te gusta mi perfil, no dudes en contactar conmigo!")},5000);
+
+
+var BotonFormulario=document.getElementById("BotonFromulario");
+var nombre_formulario=document.getElementById("Nombre");
+var tipo_persona=document.getElementById("TipoPersona");
+var email=document.getElementById("email");
+var lista_numeros=[0,1,2,3,4,5,6,7,8,9];
+
+
+console.log(nombre_formulario);
+
+function ValidacionFormulario(){
+    if (nombre_formulario==null || nombre_formulario==""){
+        alert("Parece que no has escrito el nombre correctamente.");
+        return false;
+    }
+}
+
+
+BotonFormulario?.addEventListener("click", function()  { ValidacionFormulario}, false);
+
+
+
+var gotop=document.getElementsByClassName("go-top")[0];
+
+window.onscroll=function(){scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
+        gotop.style.display = "block";
+    } else {
+        gotop.style.display = "none";
+    }
+}
+
+function topFunction() {
+    document.documentElement.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+
+gotop.addEventListener("click", function()  { topFunction}, false);
