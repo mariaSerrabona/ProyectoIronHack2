@@ -27,6 +27,18 @@ h7{
     margin-bottom: 15px;
 }
 
+@keyframes rock {
+    0% {
+        transform: rotate(-1deg);
+    }
+    50% {
+        transform: rotate(2deg);
+    }
+    100% {
+        transform: rotate(-1deg);
+    }
+}
+
 h8{
     font-size: 40px;
     color:#cfa1a1;
@@ -43,6 +55,9 @@ h8{
     max-width: 34%;
     float: right;
     height: auto;
+    animation: rock;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
 }
 .Descripcion p{
     font-size: 18px;
@@ -150,6 +165,11 @@ h8{
     margin-left: 10px;
     margin-right: 10px;
     text-align: justify;
+}
+.BtonModo{
+    position: relative;
+    margin-left: 10px;
+    margin-top: 10px;
 }
 
 .Presentacion img{

@@ -8,6 +8,7 @@
     </head>
 
     <body class="cuerpoInformacion">
+
         <div class="ContenedorMenu">
             <nav>
                 <div id="menuToggle">
@@ -25,6 +26,10 @@
             </nav>
         </div>
         <div class="ContenedorInicio">
+            <div class="BotonModo">
+                <button id="BotonOscuro">Modo Oscuro</button>
+                <button id="BotonClaro">Modo Claro</button>
+            </div>
             <div class="Presentacion">
                 <h2 id="TitulosPpal"><b>¿Por qué yo?</b></h2>
                 <img id ="Mates" alt="mates" src="https://digitalcreativemind.com/wp-content/uploads/2021/06/Analytics_amp_Data_Science.gif">
@@ -41,7 +46,7 @@
 
             <div class="CienciaDatos"></div>
                 <h2 ><b>¿Qué es la ciencia de datos y por qué es importante?</b></h2>
-                <img class="foto_datos" alt="ingenieria" src="https://cdni.iconscout.com/illustration/premium/thumb/data-science-illustration-concept-1457949-1239367.png">
+                <img class="foto_datos" id="FotoDatos" alt="ingenieria" src="https://cdni.iconscout.com/illustration/premium/thumb/data-science-illustration-concept-1457949-1239367.png">
                 <p>La ciencia de datos es una disciplina que combina métodos estadísticos, matemáticos y
                     de programación para analizar y extraer información significativa a partir de conjuntos
                     de datos complejos. El objetivo principal de la ciencia de datos es descubrir patrones,
@@ -102,10 +107,14 @@
                         </li>
                     </ul>
                 </div>
+
+            </div>
+            
         </div>
+
         <footer id="footer">
             <p> Copyright ©2023 | MARÍA PÉREZ-SERRABONA - INGENIERÍA MATEMÁTICA </p>
         </footer>
-
+        <script src="eventos.js"></script>
     </body>
 </html>
