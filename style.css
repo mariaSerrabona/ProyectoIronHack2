@@ -12,13 +12,12 @@ body{
 
 .cuerpoInicio{
     background-color:  #000000;
-    text-align: center;
     margin-left: 15px;
     margin-right: 15px;
     position: relative;
 }
 h7{
-    margin-top: 70px;
+    margin-top: 60px;
     font-size: 35px;
     color: #c6bfbf;
     text-align: center;
@@ -29,8 +28,8 @@ h7{
 }
 
 h8{
-    font-size: 45px;
-    color:#c6bfbf;
+    font-size: 40px;
+    color:#cfa1a1;
     text-align: center;
     max-width:fit-content;
     float: left;
@@ -40,11 +39,12 @@ h8{
 
 #MiFoto{
     margin-top: 100px;
-    width: 40%;
+    width: 34%;
+    max-width: 34%;
     float: right;
     height: auto;
 }
-#Descripcion p{
+.Descripcion p{
     font-size: 18px;
     color:#c6bfbf;
     text-align: justify;
@@ -53,8 +53,21 @@ h8{
     max-width: fit-content;
 }
 
+.BotonInicio a{
+    padding: 20px 30px;
+    border: 3px solid rgb(175, 172, 165);
+    text-decoration: none;
+    color: rgb(175, 172, 165);
+    display:flex;
+    position: initial;
+    width:max-content;
+}
 
-
+.BotonInicio a:hover{
+    background-color:#cfa1a1;
+    border: 3px solid #cfa1a1;
+    color:#232323;
+}
 
 
 
@@ -330,6 +343,13 @@ h4{
 }
 
 
+footer{
+    color:#c6bfbf;
+    text-align: center;
+    margin-bottom: 0px;
+    margin-top: auto;
+    display: flex;
+}
 
 
 
@@ -338,8 +358,7 @@ h4{
 
 
 
-
-@media (min-width: 100px) {
+@media (min-width: 1000px) {
 
     /*    --------------------PÁGINA PPAL  -------------------  */
     .cuerpoInicio{
@@ -358,17 +377,26 @@ h4{
         font-size: 18px;
         color:#c6bfbf;
         text-align: justify;
-        float: left;
-        max-width: 65%;
+        float: right;
         margin-left: 20px;
         margin-bottom: 20px;
         background-color:  #000000;
     }
 
     #MiFoto{
-        width: 30%;
+        width: 23%;
         float: right;
         height: auto;
+    }
+
+    .BotonInicio a{
+        padding: 20px 30px;
+        border: 3px solid rgb(175, 172, 165);
+        text-decoration: none;
+        color: rgb(175, 172, 165);
+        display:flex;
+        position: initial;
+        width:90%;
     }
 
 
