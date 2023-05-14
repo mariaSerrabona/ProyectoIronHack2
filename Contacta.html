@@ -28,17 +28,13 @@
             <div id="title">
                 <h3>CONTACTA CONMIGO!</h3>
             </div>
-            <form class="Formulario">
-                <input type="text" class="Formulario" id="Nombre" placeholder="Nombre y Apellidos"><br>
-                <select id="TipoPersona" name="TipoPersona" >
-                    <option value="" selected disabled hidden> ¿Quién eres?</option>
-                    <option value="Empresa">Empresa</option>
-                    <option value="Persona Particular">Persona Particular</option>
-                </select><br>
-                <input type="email" class="Formulario" id="email" placeholder="Email"><br>
-                <input type="text" class="Formulario" placeholder="Asunto"><br>
+            <div id="Validacion"></div>
+            <form class="Formulario" id="form">
+                <input type="text" class="Formulario" id="Nombre" placeholder="Nombre y Apellidos" ><br>
+                <input type="email" class="Formulario" id="email" placeholder="Email" required><br>
+                <input type="text" id="asunto" class="Formulario" placeholder="Asunto" required><br>
                 <textarea class="Formulario" placeholder="¿Qué te gustaría saber?"></textarea><br>
-                <a class="BotonFromulario" id="BotonFromulario">Enviar</a>
+                <button  id="BotonFromulario" type="submit">Enviar</button>
             </form>
             <br>
         </div>
