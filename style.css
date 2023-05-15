@@ -1,3 +1,5 @@
+/* Etiqueta general para todos los cuerpos*/
+
 body{
     background-color: #E4E0E4;
     font-family: "Lato", sans-serif;
@@ -10,6 +12,13 @@ body{
 }
 
 
+
+
+
+/*                  Primera Página HTML                     */
+
+
+/* Especificaciones del cuerpo de la primera página*/
 .cuerpoInicio{
     background-color:  #000000;
     margin-left: 15px;
@@ -27,7 +36,19 @@ h7{
     margin-bottom: 15px;
 }
 
-@keyframes rock {
+h8{
+    font-size: 40px;
+    color:#cfa1a1;
+    text-align: center;
+    max-width:fit-content;
+    float: left;
+    width: 60%;
+    text-align: left;
+}
+
+
+
+@keyframes movimiento {
     0% {
         transform: rotate(-1deg);
     }
@@ -39,15 +60,7 @@ h7{
     }
 }
 
-h8{
-    font-size: 40px;
-    color:#cfa1a1;
-    text-align: center;
-    max-width:fit-content;
-    float: left;
-    width: 60%;
-    text-align: left;
-}
+
 
 #MiFoto{
     margin-top: 100px;
@@ -55,7 +68,7 @@ h8{
     max-width: 34%;
     float: right;
     height: auto;
-    animation: rock;
+    animation: movimiento;
     animation-iteration-count: infinite;
     animation-duration: 1s;
 }
@@ -92,12 +105,13 @@ h8{
 
 
 
+/*                  Información HTML                     */
 
+/* Menu de hamburguesa*/
 #menuToggle{
     display: block;
     position: relative;
     z-index: 1;     /*Para poder superponer elementos*/
-    -webkit-user-select: none;  /*Checkbox actúa como selector para ir a la página que seleccionemos*/
     user-select: none;
     border: 30px solid black;
     background-color: #000000;
@@ -105,12 +119,14 @@ h8{
     top:0px;
 }
 
+/* Cada una de las opciones del menu*/
 #menuToggle a{
     text-decoration: none;
     color: #232323;
 }
 
 
+/* En este estilo de menus, el input es lo que el usuario selecciona navegar*/
 #menuToggle input{
     display: block;
     width: 40px;
@@ -120,10 +136,10 @@ h8{
     left: -5px;
     opacity: 0;
     z-index: 2;
-    -webkit-touch-callout: none;
 }
 
 
+/* Span son los tres segmentos que indican el menu*/
 #menuToggle span{
     display: block;
     width: 33px;
@@ -136,6 +152,8 @@ h8{
 
 }
 
+
+/* En general cunado no se interactúa con el menú, sus opciones se esconden*/
 #menu{
     position: absolute;
     width: 100%;
@@ -144,9 +162,8 @@ h8{
     padding-top: 125px;
     background: #dcdbdc;
     list-style-type: none;
-    -webkit-font-smoothing: antialiased;
     transform-origin: 0% 0%;
-    transform: translate(-200%, 0);
+    transform: translate(-200%, 0);/* En esta parte se esconden las opciones del mnu*/
 }
 
 
@@ -155,11 +172,14 @@ h8{
     font-size: 22px;
 }
 
-#menuToggle input:checked ~ ul{
+#menuToggle input:checked ~ ul{  /* Selección de un atributo (ul) cuando el input se ha selccionado (una de las opciones del menu)*/
     transform: none;
 }
 
 
+
+
+/* Contenido de la Primera página*/
 
 .ContenedorInicio{
     margin-left: 10px;
@@ -177,8 +197,6 @@ h8{
     width: 50%;
     margin-right: 10px;
 }
-
-
 
 
 .foto_datos{
@@ -199,7 +217,7 @@ h8{
 }
 
 
-
+/*Estilo del botón que sube hasta arriba del todo al hacer scroll */
 .go-top {
     position: fixed;
     right: 30px;
@@ -221,6 +239,13 @@ h8{
 
 
 
+
+
+
+/*                  Proyectos Página HTML                     */
+
+
+/*Proyecto1*/
 .Proyecto1{
     margin-right: 10px;
     margin-left: 10px;
@@ -242,7 +267,7 @@ h8{
 
 }
 
-
+/*Proyecto2*/
 .Proyecto2{
     text-align: justify;
     margin-left: 10px;
@@ -261,6 +286,7 @@ h8{
 
 }
 
+/*Proyecto3*/
 .Proyecto3 h2{
     margin-left: 10px;
     margin-right: 10px;
@@ -283,6 +309,14 @@ h8{
 
 }
 
+
+
+
+
+
+
+
+/*                  Contacta Página HTML                     */
 
 .cuerpoFormulario{
     background-image: url("https://img.freepik.com/premium-vector/abstract-plexus-blue-geometrical-shapes-connection-web-concept-digital-communication-technology-network-background-with-moving-lines-dots_43778-532.jpg");
@@ -314,6 +348,7 @@ h3{
 
 }
 
+/*Estilos de los mensajes en el caso de que salten errores*/
 #Validacion{
     font-size: 16px;
     color:red;
@@ -362,6 +397,9 @@ textarea:hover {
 
 
 
+
+
+/*                  Footer                   */
 #footer p{
     color:#c6bfbf;
     text-align: center;
@@ -377,10 +415,9 @@ textarea:hover {
 
 
 
-
+/*                  vista ordenador                   */
 @media (min-width: 1000px) {
 
-    /*    --------------------PÁGINA PPAL  -------------------  */
     .cuerpoInicio{
         text-align: center;
         margin-top:80px;
