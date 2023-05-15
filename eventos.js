@@ -8,13 +8,19 @@ var imagen_informacion2=document.getElementById("FotoDatos");
 //Cambio al modo oscuro, cambio de fondo y letras más las imágenes de la primera pantalla
 function CambiarModoOscuro(color_fondo, color_letras){
     if ( document.URL.includes("informacion.html") || document.URL.includes("Portfolio.html") ){
+
         document.body.style.backgroundColor = color_fondo;
         document.body.style.color= color_letras;
-        if ( document.URL.includes("informacion.html") ) {
-            var imagen_informacion1=document.getElementById("Mates");
-            imagen_informacion1.src="https://marvel-b1-cdn.bc0a.com/f00000000100045/www.elmhurst.edu/wp-content/uploads/2021/10/data-science-skills-illustration.jpg";
 
-            var imagen_informacion2=document.getElementById("FotoDatos");
+        //Cambiar el color de los títulos para que destaque mas
+        //Se genera una lista con todos los títulos(h2) y se recorren los elementos y se les va cambiando el color
+        let titulos=document.getElementsByTagName("h2");
+        for(var i=0;i<titulos.length;i++){
+            titulos[i].style.color="white";
+        }
+
+        if ( document.URL.includes("informacion.html") ) {
+            imagen_informacion1.src="https://marvel-b1-cdn.bc0a.com/f00000000100045/www.elmhurst.edu/wp-content/uploads/2021/10/data-science-skills-illustration.jpg";
             imagen_informacion2.src="https://www.cloudyml.com/wp-content/uploads/2022/06/Insurance-Leadspace-Aniamted.gif";
         }
     }
@@ -26,6 +32,13 @@ function CambiarModoClaro(color_fondo, color_letras){
     if ( document.URL.includes("informacion.html") || document.URL.includes("Portfolio.html") ){
         document.body.style.backgroundColor = color_fondo;
         document.body.style.color= color_letras;
+
+        //Cuando se cambia al modo claro, se reetablecen los títulos a negro
+        let titulos=document.getElementsByTagName("h2");
+        for(var i=0;i<titulos.length;i++){
+            titulos[i].style.color="black";
+        }
+
         if ( document.URL.includes("informacion.html") ) {
             imagen_informacion1.src="https://digitalcreativemind.com/wp-content/uploads/2021/06/Analytics_amp_Data_Science.gif";
             imagen_informacion2.src="https://cdni.iconscout.com/illustration/premium/thumb/data-science-illustration-concept-1457949-1239367.png";
@@ -36,9 +49,8 @@ function CambiarModoClaro(color_fondo, color_letras){
 
 //Solo se da la opción del cambio de tema en las dos primeras páginas de HTML
 if ( document.URL.includes("informacion.html") || document.URL.includes("Portfolio.html") ){
+
     boton_oscuro.addEventListener("click", function()  { CambiarModoOscuro("#353232", "#A6A6A6")});
-
-
     boton_claro.addEventListener("click", function()  { CambiarModoClaro("#E4E0E4", "black")});
 
 }
